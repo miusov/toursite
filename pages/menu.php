@@ -14,7 +14,6 @@
                 <li><a href="index.php?page=2">Review</a></li>
                 <li><a href="index.php?page=3">Registration</a></li>
                 <li><a href="index.php?page=4">Admin</a></li>
-                <li><a href="index.php?page=5">HotelInfo</a></li> 
               </ul>
             </div>
           </div>
