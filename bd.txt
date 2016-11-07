@@ -1,0 +1,9 @@
+Countries(id, country)
+Cities(id, city, countryid)
+Hotels(id, hotel, cityid, countryid, srars, cost, info)
+
+Images(id, imagepath, hotelid)
+
+Roles(id, role)
+
+Users(id, login, pass, roleid, email, phone, discount, avatar)

@@ -1,0 +1,136 @@
+@font-face {
+	font-family: 'openSans';
+	src: url('../fonts/OpenSans-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+body{
+	background-image: url(../img/bg.jpg);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	font-family: openSans;
+}
+#logo{
+	font-size: 30px;
+}
+#logo a{
+	text-decoration: none;
+	color: blue;
+}
+.admin-form input{
+	width: 207px;
+}
+input{
+	margin: 2px;
+	border: 1px gray solid;
+	padding: 8px;
+}
+input[value='SIGN IN']{
+	background-color: #0076AF;
+	color: #fff;
+	border: 1px solid #000;
+}
+input[type='password'], input[type='text'], input[type='email']{
+	width: 207px;
+}
+input.add{
+	background-color: #59B210;
+	color: #fff;
+	border: 1px solid #000;
+}
+input.del{
+	background-color: #F51900;
+	color: #fff;
+	border: 1px solid #000;
+}
+input.add:hover{
+	transition: all .7s;
+	background-color: #C9DCDE;
+	color: #000;
+}
+input.del:hover{
+	transition: all .7s;
+	background-color: #C9DCDE;
+	color: #000;
+}
+input[value='SIGN IN']:hover{
+	transition: all .7s;
+	background-color: #C9DCDE;
+	color: #000;
+}
+select{
+	min-width: 207px;
+	padding: 8px;
+	margin: 2px;
+}
+button{
+	padding: 8px;
+}
+.width{
+	width: 100%;
+}
+.width2{
+	width: 68%;
+}
+.width3{
+	width: 34%;
+}
+.inputwidth{
+	min-width: 207px;
+}
+.enter .row{
+	height: 50px;
+}
+.inp{
+	width: 100px;
+}
+.admin-form{
+	float: right;
+	margin-right: -15px;
+}
+.content{
+	background-color: #fff;
+}
+.navbar-nav>li>a{
+	font-size: 18px;
+	font-weight: bold;
+}
+.navbar-nav>li:hover{
+	background-color: #049EDE;
+	transition: all 0.7s;
+}
+.navbar{
+	border-radius: 0;
+	background: #0076AF;
+	border: none;
+}
+.navbar-default .navbar-nav>li>a{
+	color: #fff;
+}
+.price{
+	height: 250px;
+	line-height: 250px;
+}
+#price{
+	font-size: 60px;
+}
+.stars{
+	background-image: url(../img/stars.jpg);
+	background-repeat: no-repeat;
+	background-size: 75%;
+	// background-position: 0 0;
+	height: 45px;
+}
+.form{
+	max-height: 500px;
+	overflow-y: scroll;
+	box-sizing: border-box;
+}
+footer{
+	height: 100px;
+	line-height: 100px;
+	background-color: #0076AF;
+	margin-top: 15px;
+	color: #fff;
+	font-size: 19px;
+}

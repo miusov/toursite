@@ -1,0 +1,67 @@
+*{
+
+	padding: 0px;
+	margin: 0px;
+}
+
+div.ic_myCarousel {
+	// margin: 100px auto;
+	clear:right;
+}
+
+.ic_myCarousel .ic_button {
+	float: left;
+	height: 50px;
+	line-height: 25px;
+	margin: 4px 4px 0 2px;
+	-moz-box-shadow: 0px 0px 10px #333;
+	-webkit-box-shadow:  0px 0px 10px #333;
+	box-shadow:  0px 0px 10px #333;
+	width: 90px;
+	border: 2px solid #eee;
+	background: #ddd;
+}
+.infiniteCarousel {
+	margin: 0 auto !important;
+	-moz-box-shadow: 0px 0px 10px #333;
+	-webkit-box-shadow:  0px 0px 10px #333;
+	box-shadow:  0px 0px 10px #333;
+}
+.ic_wrapper {
+	width: 100% !important;
+	
+}
+.ic_myCarousel .ic_active {
+	background: #fff;
+	border: 2px solid #800;
+}
+.ic_peek_padding {
+	width: 100% !important;
+}
+div p {
+	clear: both;
+	color: #333333;
+	font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+	font-size: 18px;
+	text-shadow: 0 1px 1px #C9C9C9;
+}.ic_myCarousel .ic_active  {
+	background: #fff;
+	border: 1px solid #faa;
+}
+.ic_caption {
+	opacity: .6;
+	background: #fff;
+	font-size: 12px;
+	font-family: arial;
+	padding: 4px 8px;
+	width: 700px;
+}
+.options {
+	font-size: 16px;
+}
+img{
+	width: 100%;
+}
+#carousel{
+	width: 100%;
+}
