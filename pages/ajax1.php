@@ -12,14 +12,4 @@ while ($row=mysql_fetch_array($res, MYSQL_NUM)) {
 echo '</select>';
 mysql_free_result($res);
 
-
-
-
  ?>
-
-
- <!-- 
-<a href="hotelinfo.php?hid="$row[0]></a>
-
-
-  -->

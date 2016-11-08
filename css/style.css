@@ -30,7 +30,7 @@ input[value='SIGN IN']{
 	color: #fff;
 	border: 1px solid #000;
 }
-input[type='password'], input[type='text'], input[type='email']{
+input[type='password']{
 	width: 207px;
 }
 input.add{
@@ -58,6 +58,12 @@ input[value='SIGN IN']:hover{
 	background-color: #C9DCDE;
 	color: #000;
 }
+.regform input{
+	width: 300px;
+}
+.regform input[type='submit']{
+	margin-bottom: 30px;
+}
 select{
 	min-width: 207px;
 	padding: 8px;
@@ -74,6 +80,7 @@ button{
 }
 .width3{
 	width: 34%;
+	margin-bottom: 30px;
 }
 .inputwidth{
 	min-width: 207px;

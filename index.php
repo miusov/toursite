@@ -29,7 +29,7 @@
         <div class="container enter">
           <div class="row">
             <div class="col-xs-2 right">
-              <a href="index.php?page=1"><img src="img/logo.png" alt=""></a>
+              <a href="index.php"><img src="img/logo.png" alt=""></a>
             </div>
             <div class="col-xs-10">
               <form action="index.php" class="admin-form">

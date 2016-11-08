@@ -27,7 +27,7 @@ function register($name,$pass,$email){
 		echo '<h3 style="color:red;">Слишком короткие логин/пароль</h3>';
 		return false;		
 	}
-	$ins='insert into users (login,pass,email,roleid) values("'.$name.'","'.md5($pass).'","'.$email.'",2)';
+	$ins='INSERT INTO users (login,pass,email,roleid) VALUES("'.$name.'","'.md5($pass).'","'.$email.'",2)';
 	connect();
 	mysql_query($ins);
 	return true;
@@ -45,7 +45,7 @@ function login($name,$pass){
 		return false;		
 	}
 	connect();
-	$sel='selece * from users were name="'.$name.'"
+	$sel='SELECT * FROM users WHERE name="'.$name.'"
 	and path="'.md5($pass).'"';
 	$res=mysql_query($sel);
 	$row=mysql_fetch_array($res,MYSQL_NUM);

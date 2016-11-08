@@ -9,7 +9,7 @@ if (isset($_POST['adduser'])) {
 else{
 ?>
 
-<form action="index.php?page=3" method="post">
+<form action="index.php?page=3" method="post" class="regform">
 	<div class="form-group">
 		<label for="login">Login</label>
 		<input type="text" id="login" class="form-control" name="login">
