@@ -33,9 +33,9 @@
             </div>
             <div class="col-xs-10">
               <form action="index.php" class="admin-form">
-                <input type="text" placeholder="login" class="inp"><br>
-                <input type="password" placeholder="password" class="inp"> <br>
-                <input type="submit" value="SIGN IN">
+                <input type="text" placeholder="login" class="inp" name="log"><br>
+                <input type="password" placeholder="password" class="inp" name="pas"> <br>
+                <input type="submit" value="SIGN IN" name="signin">
               </form>
             </div>
           </div>

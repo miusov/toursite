@@ -2,7 +2,7 @@
 
 <?php 
 if (isset($_POST['adduser'])) {
-	if(register($_POST['login'],$_POST['pass1'],$_POST['email'])){
+	if(register($_POST['login'],$_POST['pass1'],$_POST['pass2'],$_POST['email'])){
 		echo '<h3 style="color:green;">ADD USER</h3>';
 	}
 }
