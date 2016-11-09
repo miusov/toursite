@@ -29,7 +29,7 @@
         <div class="container enter">
           <div class="row">
             <div class="col-xs-2 right">
-              <a href="index.php"><img src="img/logo.png" alt=""></a>
+              <a href="index.php?page=0"><img src="img/logo.png" alt=""></a>
             </div>
             <div class="col-xs-10">
               <form action="index.php" class="admin-form">
@@ -50,60 +50,64 @@
         <section class="content container">
           <div class="row">
             <div class="col-md-12">
-              <?php 
-              if(isset($_GET['page']))
-              {
-                $page=$_GET['page'];
-                if($page==1)include_once("pages/tours.php");
-                if($page==2)include_once("pages/review.php");
-                if($page==3)include_once("pages/register.php");
-                if($page==4)include_once("pages/admin.php");
-                if($page==5)include_once("pages/hotelinfo.php");
-              }
-              ?>
-            </div>
-          </div>
-        </section>
+                          <?php
+                          if (empty($_GET)) {
+                            include_once("pages/start.php");
+                          }
+                          if(isset($_GET['page']))
+                          {
+                            $page=$_GET['page'];
+                            if($page==0)include_once("pages/start.php");
+                            if($page==1)include_once("pages/tours.php");
+                            if($page==2)include_once("pages/review.php");
+                            if($page==3)include_once("pages/register.php");
+                            if($page==4)include_once("pages/admin.php");
+                            if($page==5)include_once("pages/hotelinfo.php");
+                          }
+                          ?>
+                        </div>
+                      </div>
+                    </section>
 
-        <!-- footer -->
+                    <!-- footer -->
 
-        <footer class="container-fluid">
-          <div class="container">
-            <p class="text-center">Copyright © 2016 IT STEP SCHOOL.</p>
-          </div>
-          
-        </footer>
+                    <footer class="container-fluid">
+                      <div class="container">
+                        <p class="text-center">Copyright © 2016 IT STEP SCHOOL.</p>
+                      </div>
 
-      </div>
+                    </footer>
 
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="js/jquery-3.1.1.min.js"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/ajax/scriptAjax.js"></script>
-      <script type="text/javascript" src="js/jquery.infinitecarousel3.js"></script>
-      <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-      <script type="text/javascript">
-        $(function(){
-          $('#carousel').infiniteCarousel({
-            imagePath: 'images/',
-            transitionSpeed:450,
-            displayTime: 6000,
-            internalThumbnails: false,
-            thumbnailType: 'images',
-            customClass: 'myCarousel',
-            progressRingColorOpacity: '0,0,0,.9',
-            progressRingBackgroundOn: true,
-            easeLeft: 'easeOutExpo',
-            easeRight:'easeOutQuad',
-            inView: 1,
-            advance: 1,
-            autoPilot: true,
-            prevNextInternal: true,
-            autoHideCaptions: true
-          });
-        });
-      </script>
-      <script src="js/main.js"></script>
-    </body>
-    </html>
+                  </div>
+
+                  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+                  <script src="js/jquery-3.1.1.min.js"></script>
+                  <!-- Include all compiled plugins (below), or include individual files as needed -->
+                  <script src="js/bootstrap.min.js"></script>
+                  <script src="js/ajax/scriptAjax.js"></script>
+                  <script type="text/javascript" src="js/jquery.infinitecarousel3.js"></script>
+                  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+                  <script type="text/javascript">
+                    $(function(){
+                      $('#carousel').infiniteCarousel({
+                        imagePath: 'images/',
+                        transitionSpeed:450,
+                        displayTime: 6000,
+                        internalThumbnails: false,
+                        thumbnailType: 'images',
+                        customClass: 'myCarousel',
+                        progressRingColorOpacity: '0,0,0,.9',
+                        progressRingBackgroundOn: true,
+                        easeLeft: 'easeOutExpo',
+                        easeRight:'easeOutQuad',
+                        inView: 1,
+                        advance: 1,
+                        autoPilot: true,
+                        prevNextInternal: true,
+                        autoHideCaptions: true
+                      });
+                    });
+                  </script>
+                  <script src="js/main.js"></script>
+                </body>
+                </html>

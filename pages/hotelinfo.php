@@ -24,7 +24,7 @@ if(isset($_GET['hotel'])){
 	elseif ($hstars==5) {$stars=-510;} 
 	else {$stars=-5;}
 	mysql_free_result($res);
-	echo '<h1>Hotel '.$hname.'</h1>';
+	echo '<h1>Hotel "'.$hname.'"</h1>';
 	?>
 
 

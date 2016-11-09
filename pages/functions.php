@@ -16,6 +16,7 @@ function connect(){
 
 
 function register($name,$pass,$email){
+	connect();
 	$name=trim(htmlspecialchars($name));
 	$pass=trim(htmlspecialchars($pass));
 	$email=trim(htmlspecialchars($email));
@@ -27,8 +28,8 @@ function register($name,$pass,$email){
 		echo '<h3 style="color:red;">Слишком короткие логин/пароль</h3>';
 		return false;		
 	}
-	$ins='INSERT INTO users (login,pass,email,roleid) VALUES("'.$name.'","'.md5($pass).'","'.$email.'",2)';
-	connect();
+	$ins='INSERT INTO Users (login,pass,email,roleid) VALUES("'.$name.'","'.md5($pass).'","'.$email.'",2)';
+	
 	mysql_query($ins);
 	return true;
 }

@@ -133,6 +133,9 @@ button{
 	overflow-y: scroll;
 	box-sizing: border-box;
 }
+.infiniteCarousel_item img{
+	height: 100%;
+}
 footer{
 	height: 100px;
 	line-height: 100px;

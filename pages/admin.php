@@ -215,9 +215,9 @@
 						echo '<script>alert("Wrong file size: '.$v.'")</script>';
 						continue;
 					}
-					if (move_uploaded_file($_FILES['file']['tmp_name'][$k], 'img/'.$v)) {
+					if (move_uploaded_file($_FILES['file']['tmp_name'][$k], 'img/hotels/'.$v)) {
 						$ins='INSERT INTO images(hotelid, imagepath) 
-						VALUES ('.$_REQUEST['hotelid'].', "img/hotels'.$v.'")';
+						VALUES ('.$_REQUEST['hotelid'].', "img/hotels/'.$v.'")';
 						mysql_query($ins);
 					}
 				}
