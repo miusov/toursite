@@ -51,7 +51,7 @@ function login($name,$pass){
 		return false;		
 	}
 	connect();
-	$sel='SELECT * FROM users WHERE name="'.$name.'" AND path="'.md5($pass).'"';
+	$sel='SELECT * FROM users WHERE login="'.$name.'" AND pass="'.md5($pass).'"';
 	$res=mysql_query($sel);
 	$row=mysql_fetch_array($res,MYSQL_NUM);
 	if($row[1]==$name){

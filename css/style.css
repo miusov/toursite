@@ -25,7 +25,7 @@ input{
 	border: 1px gray solid;
 	padding: 8px;
 }
-input[value='SIGN IN']{
+input[value='Enter']{
 	background-color: #0076AF;
 	color: #fff;
 	border: 1px solid #000;
@@ -53,7 +53,7 @@ input.del:hover{
 	background-color: #C9DCDE;
 	color: #000;
 }
-input[value='SIGN IN']:hover{
+input[value='Enter']:hover{
 	transition: all .7s;
 	background-color: #C9DCDE;
 	color: #000;
@@ -132,6 +132,16 @@ button{
 	max-height: 500px;
 	overflow-y: scroll;
 	box-sizing: border-box;
+}
+#exit{
+	width: 40px;
+	padding: 0;
+	border: none;
+	margin-left: 10px;
+}
+.name{
+	font-size: 18px;
+	line-height: 37px;
 }
 .infiniteCarousel_item img{
 	height: 100%;

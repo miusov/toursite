@@ -1,3 +1,6 @@
+<?php 
+if (isset($_SESSION['ruser'])){
+	?>
 <h1>Admin</h1>
 <hr>
 <div class="row">
@@ -226,12 +229,11 @@
 			?>
 		</div>
 
-
-
-<!-- 
-сделать форму для добавления отелей
-
-название отеля
-список(селект) страна/город
-кнопка добавить отель
- -->
+<?php 
+}
+else{
+	echo '<p style="margin-bottom: 30px">';
+	echo '<h3>Only for registered users!</h3> <br>';
+	echo '<a href="index.php?page=3"> Registration</a></p>';
+}
+ ?>
