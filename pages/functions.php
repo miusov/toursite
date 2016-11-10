@@ -1,7 +1,7 @@
 <?php 
 
-$user='mius';
-$pass='123';
+$user='root';
+$pass='';
 $host='localhost';
 $dbname='toursite';
 

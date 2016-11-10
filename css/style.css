@@ -139,9 +139,16 @@ button{
 	padding: 0;
 	border: none;
 	margin-left: 10px;
+	background-color: #F51900;
+	color: #fff;
+}
+#exit:hover{
+	transition: all .7s;
+	background-color: #C9DCDE;
+	color: #000;
 }
 .name{
-	font-size: 18px;
+	font-size: 14px;
 	line-height: 37px;
 }
 .infiniteCarousel_item img{

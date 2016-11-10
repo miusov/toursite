@@ -20,7 +20,7 @@ countryid int,
 foreign key(countryid) references Countries(id) on delete cascade,
 cityid int,
 foreign key(cityid) references Cities(id) on delete cascade,
-stars int,
+stars float, 
 cost int,
 info varchar(1024)
 )default charset="utf8"';

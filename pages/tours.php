@@ -20,10 +20,10 @@ echo '<button id="bt">VIEW</button>';
 	$sel='SELECT co.country, ci.city, ho.hotel, ho.cost, ho.stars, ho.id FROM hotels ho, cities ci, countries co WHERE ho.cityid=ci.id AND ho.countryid=co.id';
 	$res=mysql_query($sel);
 	echo '<table width="100%" class="table table-striped tbtours text-center">';
-	echo '<thead style="font-weight: bold"><td>Country</td><td>City</td><td>Hotel</td><td>Price</td><td>Stars</td><td>link</td></thead>';
+	echo '<thead style="font-weight: bold"><td>Hotel</td><td>Country</td><td>City</td><td>Price</td><td>Stars</td><td>link</td></thead>';
 	while ($row=mysql_fetch_array($res,MYSQL_NUM)) {
 			echo '<tr id="'.$row[1].'">';
-			echo '<td>'.$row[0].'</td><td>'.$row[1].'</td><td>'.$row[2].'</td><td>'.$row[3].'</td><td>'.$row[4].'</td><td><a href="index.php?page=5&hotel='.$row[5].'" target="_blanc">more info</a></td>';
+			echo '<td>'.$row[2].'</td><td>'.$row[0].'</td><td>'.$row[1].'</td><td>$'.$row[3].'</td><td>'.$row[4].'</td><td><a href="index.php?page=5&hotel='.$row[5].'" target="_blanc">more info</a></td>';
 			echo '</tr>';
 		}
 

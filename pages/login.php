@@ -3,7 +3,7 @@ if (isset($_SESSION['ruser'])){
 	echo '<form action="index.php';
 	if (isset($_GET['page'])) echo '?page='.$_GET['page'];
 	echo '" class="admin-form" method="post">';
-	echo '<span class="text-right name">Hello <span>'.$_SESSION['ruser']. '</span></span>';
+	echo '<span class="text-right name">Вы зашли как: <span><b>'.$_SESSION['ruser']. '</b></span></span>';
 	echo '<input type="submit" value="Exit" id="exit" name="exit">';
 	echo '</form>';
 	if (isset($_POST['exit'])) {
