@@ -89,7 +89,8 @@ button{
 	height: 50px;
 }
 .inp{
-	width: 100px;
+	padding: 2px !important;
+	width: 150px;
 }
 .admin-form{
 	float: right;
@@ -145,6 +146,11 @@ button{
 }
 .infiniteCarousel_item img{
 	height: 100%;
+}
+.inp, #signin{
+	padding: 2px !important;
+	width: 150px !important;
+	margin-top: 12px;
 }
 footer{
 	height: 100px;
