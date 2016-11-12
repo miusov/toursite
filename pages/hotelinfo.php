@@ -27,9 +27,6 @@ if(isset($_GET['hotel'])){
 	echo '<h1>Hotel "'.$hname.'"</h1>';
 	?>
 
-
-
-
 	<hr>
 	<div class="container">
 		<div class="row">

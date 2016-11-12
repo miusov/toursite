@@ -24,6 +24,7 @@ function register($name,$pass1,$pass2,$email,$i){
 
 	$file=fopen($i, 'rb');
 	$binary=fread($file, filesize($i));
+	$binary=addslashes($binary);
 	fclose($file);
 
 	if ($pass1 != $pass2) {
