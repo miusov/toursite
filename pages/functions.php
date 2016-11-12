@@ -1,7 +1,7 @@
 ﻿<?php 
 
 $user='root';
-$pass='123456';
+$pass='';
 $host='localhost';
 $dbname='toursite';
 
@@ -22,10 +22,13 @@ function register($name,$pass1,$pass2,$email,$i){
 	$pass2=trim(htmlspecialchars($pass2));
 	$email=trim(htmlspecialchars($email));
 
-	$file=fopen($i, 'rb');
-	$binary=fread($file, filesize($i));
-	$binary=addslashes($binary);
-	fclose($file);
+	if ($_FILES['avatar']['name']) {
+		$uploadfile = "img/avatars/".$_FILES['avatar']['name'];
+	}
+	else{
+		$uploadfile = "img/avatars/null.png";
+	}
+	move_uploaded_file($i, $uploadfile);
 
 	if ($pass1 != $pass2) {
 		echo '<h3 style="color:red;">Пароли отличаются</h3>';
@@ -39,7 +42,7 @@ function register($name,$pass1,$pass2,$email,$i){
 		echo '<h3 style="color:red;">Слишком короткие логин/пароль</h3>';
 		return false;		
 	}
-	$ins='INSERT INTO Users (login,pass,email,roleid, avatar) VALUES("'.$name.'","'.md5($pass1).'","'.$email.'",2,"'.$binary.'")';
+	$ins='INSERT INTO Users (login,pass,email,roleid, avatar) VALUES("'.$name.'","'.md5($pass1).'","'.$email.'",2,"'.$uploadfile.'")';
 
 	mysql_query($ins);
 	return true;	
@@ -72,11 +75,15 @@ function login($name,$pass){
 
 
 function getComments($hotelid){
-	$res=mysql_query('SELECT * FROM Comments WHERE hotelid='.$hotelid);
+	
+	$res=mysql_query('SELECT * FROM Comments WHERE hotelid='.$hotelid);	
 	while ($row=mysql_fetch_array($res, MYSQL_NUM)) {
+		$res2=mysql_query('SELECT * FROM Users WHERE login="'.$row[3].'"');
+		$row2=mysql_fetch_array($res2);
 		echo '<div class="panel panel-success">';
-			echo '<div class="panel-heading"><b>'.$row[3].'&nbsp;'.$row[4].'</b></div>';
-			echo '<div class="panel-body">'.$row[2].'</div>';
+		echo '<div class="col-md-1"><img src="'.$row2[avatar].'" class="img-circle"></div>
+		<div class="col-md-11 panel-heading"><b>'.$row[3].'</b>&nbsp;&nbsp;'.$row[4].'</div>';
+		echo '<div class="panel-body col-md-11 col-md-offset-1">'.$row[2].'</div>';
 		echo '</div>';
 	}
 }
