@@ -62,7 +62,7 @@ if(isset($_GET['hotel'])){
 		</div>
 		<hr>
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-11">
 				<!-- description -->
 				<h2>Description</h2>
 				<p><?php echo $hinfo; } ?></p>
@@ -70,10 +70,15 @@ if(isset($_GET['hotel'])){
 		</div>
 		<hr>
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-11">
 				<!-- coments -->
 				<h2>Coments</h2>
+				<hr>
+					<?php 
+						connect();
+						getComments($hotel);
 
+					 ?>
 			</div>
 		</div>
 	</div>

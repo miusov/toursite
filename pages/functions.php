@@ -1,7 +1,7 @@
-<?php 
+﻿<?php 
 
 $user='root';
-$pass='';
+$pass='123456';
 $host='localhost';
 $dbname='toursite';
 
@@ -61,6 +61,17 @@ function login($name,$pass){
 	}
 	else{
 		return false;
+	}
+}
+
+
+function getComments($hotelid){
+	$res=mysql_query('SELECT * FROM Comments WHERE hotelid='.$hotelid);
+	while ($row=mysql_fetch_array($res, MYSQL_NUM)) {
+		echo '<div class="panel panel-success">';
+			echo '<div class="panel-heading"><b>'.$row[3].'&nbsp;'.$row[4].'</b></div>';
+			echo '<div class="panel-body">'.$row[2].'</div>';
+		echo '</div>';
 	}
 }
 

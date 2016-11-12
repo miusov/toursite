@@ -33,17 +33,20 @@ input[value='Enter']{
 input[type='password']{
 	width: 207px;
 }
-input.add{
+input.add, button.add{
 	background-color: #59B210;
 	color: #fff;
 	border: 1px solid #000;
+}
+button.add{
+	margin-bottom: 20px;
 }
 input.del{
 	background-color: #F51900;
 	color: #fff;
 	border: 1px solid #000;
 }
-input.add:hover{
+input.add:hover, button.add:hover{
 	transition: all .7s;
 	background-color: #C9DCDE;
 	color: #000;
@@ -63,6 +66,10 @@ input[value='Enter']:hover{
 }
 .regform input[type='submit']{
 	margin-bottom: 30px;
+}
+.review{
+	width: 90%;
+	height: 100px;
 }
 select{
 	min-width: 207px;
