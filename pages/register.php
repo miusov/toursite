@@ -2,14 +2,14 @@
 
 <?php 
 if (isset($_POST['adduser'])) {
-	if(register($_POST['login'],$_POST['pass1'],$_POST['pass2'],$_POST['email'])){
+	if(register($_POST['login'],$_POST['pass1'],$_POST['pass2'],$_POST['email'],$GLOBALS['avatar'])){
 		echo '<h3 style="color:green;">ADD USER</h3>';
 	}
 }
 else{
 ?>
 
-<form action="index.php?page=3" method="post" class="regform">
+<form action="index.php?page=3" method="post" class="regform" enctype="multipart/form-data">
 	<div class="form-group">
 		<label for="login">Login</label>
 		<input type="text" id="login" class="form-control" name="login">
@@ -26,6 +26,8 @@ else{
 		<label for="email">E-mail</label>
 		<input type="email" id="email" class="form-control" name="email">
 	</div>
+	<label for="avatar">Avatar</label>
+	<input type="file" name="avatar">
 	<input type="submit" class="btn btn-primary" name="adduser" value="Register">
 </form>
 

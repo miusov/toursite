@@ -15,12 +15,17 @@ function connect(){
 }
 
 
-function register($name,$pass1,$pass2,$email){
+function register($name,$pass1,$pass2,$email,$i){
 	connect();
 	$name=trim(htmlspecialchars($name));
 	$pass1=trim(htmlspecialchars($pass1));
 	$pass2=trim(htmlspecialchars($pass2));
 	$email=trim(htmlspecialchars($email));
+
+	$file=fopen($i, 'rb');
+	$binary=fread($file, filesize($i));
+	fclose($file);
+
 	if ($pass1 != $pass2) {
 		echo '<h3 style="color:red;">Пароли отличаются</h3>';
 		return false;
@@ -33,7 +38,7 @@ function register($name,$pass1,$pass2,$email){
 		echo '<h3 style="color:red;">Слишком короткие логин/пароль</h3>';
 		return false;		
 	}
-	$ins='INSERT INTO Users (login,pass,email,roleid) VALUES("'.$name.'","'.md5($pass1).'","'.$email.'",2)';
+	$ins='INSERT INTO Users (login,pass,email,roleid, avatar) VALUES("'.$name.'","'.md5($pass1).'","'.$email.'",2,"'.$binary.'")';
 
 	mysql_query($ins);
 	return true;	
