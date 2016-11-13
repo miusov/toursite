@@ -80,10 +80,9 @@ function getComments($hotelid){
 	while ($row=mysql_fetch_array($res, MYSQL_NUM)) {
 		$res2=mysql_query('SELECT * FROM Users WHERE login="'.$row[3].'"');
 		$row2=mysql_fetch_array($res2);
-		echo '<div class="panel panel-success">';
+		echo '<div class="row commentsRow">';
 		echo '<div class="col-md-1"><img src="'.$row2[avatar].'" class="img-circle"></div>
-		<div class="col-md-11 panel-heading"><b>'.$row[3].'</b>&nbsp;&nbsp;'.$row[4].'</div>';
-		echo '<div class="panel-body col-md-11 col-md-offset-1">'.$row[2].'</div>';
+		<div class="col-md-11 block"><b>'.$row[3].'</b>&nbsp;&nbsp;<i>'.$row[4].'</i><br><br>'.$row[2].'</div>';
 		echo '</div>';
 	}
 }

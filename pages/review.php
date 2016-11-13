@@ -33,7 +33,7 @@ if (isset($_REQUEST['addcom'])) {
 	else{
 		$name='Гость';
 	}
-	$dt=@date("Y-m-d H:i:s");
+	$dt=date("Y-m-d H:i:s");
 	$ins='INSERT INTO Comments (hotelid, text, username, datein) VALUES ('.$hotelid.', "'.$text.'", "'.$name.'", "'.$dt.'")';
 	mysql_query($ins);
 }

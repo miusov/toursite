@@ -57,7 +57,6 @@ if(isset($_GET['hotel'])){
 				</div>
 			</div>	
 		</div>
-		<hr>
 		<div class="row">
 			<div class="col-md-11">
 				<!-- description -->
@@ -65,7 +64,6 @@ if(isset($_GET['hotel'])){
 				<p><?php echo $hinfo; } ?></p>
 			</div>
 		</div>
-		<hr>
 		<div class="row">
 			<div class="col-md-11">
 				<!-- coments -->
