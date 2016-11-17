@@ -12,16 +12,16 @@ if(isset($_GET['hotel'])){
 	$hcost=$row[5];
 	$hinfo=$row[6];
 	$stars;
-	if ($hstars==0.5) {$stars=-55;}
-	elseif ($hstars==1) {$stars=-107;}
-	elseif ($hstars==1.5) {$stars=-157;}
-	elseif ($hstars==2) {$stars=-207;}
-	elseif ($hstars==2.5) {$stars=-257;} 
-	elseif ($hstars==3) {$stars=-308;}
-	elseif ($hstars==3.5) {$stars=-358;}
-	elseif ($hstars==4) {$stars=-409;}
-	elseif ($hstars==4.5) {$stars=-460;}
-	elseif ($hstars==5) {$stars=-510;} 
+	if ($hstars==0.5) {$stars=05;}
+	elseif ($hstars==1) {$stars=1;}
+	elseif ($hstars==1.5) {$stars=15;}
+	elseif ($hstars==2) {$stars=2;}
+	elseif ($hstars==2.5) {$stars=25;}
+	elseif ($hstars==3) {$stars=3;}
+	elseif ($hstars==3.5) {$stars=35;}
+	elseif ($hstars==4) {$stars=4;}
+	elseif ($hstars==4.5) {$stars=45;}
+	elseif ($hstars==5) {$stars=5;}
 	else {$stars=-5;}
 	mysql_free_result($res);
 	echo '<h1>Hotel "'.$hname.'"</h1>';
@@ -30,7 +30,7 @@ if(isset($_GET['hotel'])){
 	<hr>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-8 col-xs-8">
 				<!-- Slider -->
 				<ul id="carousel">
 					<?php 
@@ -43,29 +43,30 @@ if(isset($_GET['hotel'])){
 					?>
 				</ul>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 col-xs-4">
 				<div class="row">
-					<div class="col-md-11 price text-center">
+					<div class="col-md-11 col-xs-11 price text-center">
 						<!-- price -->
 						<p id="price">$<?php echo $hcost ?></p>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-11 stars text-center" style="background-position: 50px <?php echo $stars ?>px">
+					<div class="col-md-11 col-xs-11 text-center">
 						<!-- stars -->
+						<img src="../img/<?php echo $stars ?>.jpg" alt="">
 					</div>
 				</div>
 			</div>	
 		</div>
 		<div class="row">
-			<div class="col-md-11">
+			<div class="col-md-11 col-xs-11">
 				<!-- description -->
 				<h2>Description</h2>
 				<p><?php echo $hinfo; } ?></p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-11">
+			<div class="col-xs-11">
 				<!-- coments -->
 				<h2>Coments</h2>
 				<hr>

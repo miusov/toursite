@@ -129,13 +129,6 @@ button{
 #price{
 	font-size: 60px;
 }
-.stars{
-	background-image: url(../img/stars.jpg);
-	background-repeat: no-repeat;
-	background-size: 75%;
-	// background-position: 0 0;
-	height: 45px;
-}
 .form{
 	max-height: 500px;
 	overflow-y: scroll;
