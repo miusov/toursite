@@ -41,7 +41,7 @@ pass varchar(32),
 email varchar(128),
 discount int,
 roleid int,
-avatar mediumblob,
+avatar varchar(256),
 phone varchar(15),
 foreign key(roleid) references Roles(id) on delete cascade
 )default charset="utf8"';
